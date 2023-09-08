@@ -29,7 +29,7 @@ sendBtn.addEventListener('click' , function(){
   console.log(age);
   document.getElementById('output-age').innerHTML = age;
   console.log(price);
-  document.getElementById('output-ticket').innerHTML = price;
+  document.getElementById('output-price').innerHTML = price;
 })
 
 
@@ -51,5 +51,3 @@ sendBtn.addEventListener('click' , function(){
    console.log(price);
   }
 
-
-// 3
