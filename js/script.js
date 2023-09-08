@@ -13,7 +13,7 @@ const km = document.getElementById('km');
 const sconto20 = 0.2
 const sconto40 = 0.4
 const sendBtn = document.getElementById('send');
-let price = km * 0.21
+const resetBtn = document.getElementById('reset')
 
 
 // 2
@@ -28,21 +28,29 @@ sendBtn.addEventListener('click' , function(){
   const age = document.getElementById('age').value;
   console.log(age);
   document.getElementById('output-age').innerHTML = age;
-  console.log(price);
-  document.getElementById('output-price').innerHTML = price;
-
   
-  if (age = 'Minorenne') {
+  
+  let price = km * 0.21 ;
+  console.log(price);
+  if (age === 'Minorenne') {
     price = price - (price * sconto20);
     console.log(price);
     }
  
  
  
-    if (age = 'Over 65') {
+    if (age === 'Over 65') {
     price = price - (price * sconto40);
     console.log(price);
    }
+
+   document.getElementById('output-price').innerHTML = price.toFixed(2);
+})
+
+sendBtn.addEventListener('reset' , function(){
+  document.getElementById('name').value = ""
+  document.getElementById('km').value = ""
+  document.getElementById('age').value = ""
 })
 
 
