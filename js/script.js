@@ -17,7 +17,6 @@ let price = km * 0.21
 
 // 2
 
-console.log(dioopo);
 
 
 // 3
