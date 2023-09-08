@@ -16,19 +16,31 @@
 
 
   <!-- da qui inizia il form -->
-  <div class="container my-4 ">
-    <input type="text" class="form-control m-2 " id="name" placeholder="Nome e Cognome">
-    <input type="text" class="form-control m-2" id="age" placeholder="Età">
-    <input type="text" class="form-control m-2" id="km" placeholder="Km da percorrere">
+ 
+    <div class="container my-4 ">
+      <input type="text" class="form-control m-2 " id="name" placeholder="Nome e Cognome">
+      <input type="text" class="form-control m-2" id="km" placeholder="Km da percorrere">
 
-    <button type="submit" class="btn btn-primary">
-      Genera biglietto</button>
-    <button type="reset" class="btn btn-danger ">
-      Annulla</button>
+      <select id="age" class="form-select m-2 " aria-label="Default select example">
+        <option selected>Selezione età</option>
+        <option value="Minorenne">Minorenne</option>
+        <option value="Maggiorenne">Maggiorenne</option>
+        <option value="Over 65">Over 65</option>
+      </select>
+  
 
 
-  </div>
 
+      <button id="send" type="button" class="btn btn-primary m-5 ">
+        Genera biglietto</button>
+      <button type="button" class="btn btn-danger m-5 ">
+        Annulla</button>
+  
+  
+    </div>
+  
+  
+  
 
 
 
@@ -36,7 +48,16 @@
   <div class="container">
 
 
-    <h2 class="output"></h2>
+    <div class="output">
+      <p>
+        nome: <span id="output-name" class="m-3 " ></span>
+        km: <span id="output-km" class="m-3 "></span>
+        Età: <span id="output-age" class="m-3 "></span>
+      </p>
+      <p>
+        Prezzo del biglietto <span id="output-ticket"></span>
+      </p>
+    </div>
   </div>
 </section>
  
