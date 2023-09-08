@@ -30,6 +30,17 @@ sendBtn.addEventListener('click' , function(){
   document.getElementById('output-age').innerHTML = age;
   console.log(price);
   document.getElementById('output-price').innerHTML = price;
+  if (age == 'Minorenne') {
+    price = price - (price * sconto20);
+    console.log(price);
+    }
+ 
+ 
+ 
+    if (age == 'Over 65') {
+    price = price - (price * sconto40);
+    console.log(price);
+   }
 })
 
 
@@ -39,15 +50,5 @@ sendBtn.addEventListener('click' , function(){
 
 
 
- if (age = 'Minorenne') {
-   price = price - (price * sconto20);
-   console.log(price);
-   }
-
-
-
-   if (age = 'Over 65') {
-   price = price - (price * sconto40);
-   console.log(price);
-  }
+ 
 
