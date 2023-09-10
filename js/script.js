@@ -15,7 +15,10 @@ const sconto40 = 0.4;
 const sendBtn = document.getElementById('send');
 const resetBtn = document.getElementById('reset');
 const min = 1;
- const max = 12; 
+ const max = 12;
+ minCP = 10000 ;
+ maxCP = 99999;
+ let codeCP ;
 let nCarr ;
 
 // 2
@@ -34,7 +37,8 @@ sendBtn.addEventListener('click' , function(){
   
   let nCarr = Math.floor(Math.random() * (max - min + 1)) + min ;
   document.getElementById('output-carrozza').innerHTML = nCarr;
-  
+  let codeCP = Math.floor(Math.random() * (maxCP - minCP + 1)) + minCP ;
+  document.getElementById('output-cp').innerHTML = codeCP;
   let price = km * 0.21 ;
   console.log(price);
   if (age === 'Minorenne') {
