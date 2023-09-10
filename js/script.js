@@ -10,14 +10,17 @@
 const outputTag = document.getElementById('output');
 const age = document.getElementById('age');
 const km = document.getElementById('km');
-const sconto20 = 0.2
-const sconto40 = 0.4
+const sconto20 = 0.2;
+const sconto40 = 0.4;
 const sendBtn = document.getElementById('send');
-const resetBtn = document.getElementById('reset')
-
+const resetBtn = document.getElementById('reset');
+const min = 1;
+ const max = 12; 
+let nCarr ;
 
 // 2
 
+// qui gestisco il bottone per generare il biglietto
 sendBtn.addEventListener('click' , function(){
   const name = document.getElementById('name').value;
   console.log(name);
@@ -29,6 +32,8 @@ sendBtn.addEventListener('click' , function(){
   console.log(age);
   document.getElementById('output-age').innerHTML = age;
   
+  let nCarr = Math.floor(Math.random() * (max - min + 1)) + min ;
+  document.getElementById('output-carrozza').innerHTML = nCarr;
   
   let price = km * 0.21 ;
   console.log(price);
@@ -47,10 +52,18 @@ sendBtn.addEventListener('click' , function(){
    document.getElementById('output-price').innerHTML = price.toFixed(2);
 })
 
-sendBtn.addEventListener('reset' , function(){
-  document.getElementById('name').value = ""
+
+// qui gestisco il bottone di reset
+resetBtn.addEventListener('click' , function(){
+  document.getElementById('name').value = ""  
   document.getElementById('km').value = ""
   document.getElementById('age').value = ""
+  document.getElementById('output-name').value = ""
+  document.getElementById('output-km').value = ""
+  document.getElementById('output-age').value = ""
+  document.getElementById('output-price').value = ""
+  
+
 })
 
 
