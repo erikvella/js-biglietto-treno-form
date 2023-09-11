@@ -7,7 +7,6 @@
 
 // 1 
 
-const biglietto = document.querySelector('biglietto')
 const age = document.getElementById('age');
 const km = document.getElementById('km');
 const sconto20 = 0.2;
@@ -40,7 +39,6 @@ sendBtn.addEventListener('click' , function(){
   document.getElementById('output-cp').innerHTML = codeCP;
   let price = km * 0.21 ;
   console.log(price);
-  
   if (age === 'Minorenne') {
     price = price - (price * sconto20);
     console.log(price);
@@ -62,7 +60,6 @@ resetBtn.addEventListener('click' , function(){
   document.getElementById('name').value = ""  
   document.getElementById('km').value = ""
   document.getElementById('age').value = ""
- 
 
 })
 
