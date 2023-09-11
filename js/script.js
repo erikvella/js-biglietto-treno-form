@@ -15,10 +15,10 @@ const sconto40 = 0.4;
 const sendBtn = document.getElementById('send');
 const resetBtn = document.getElementById('reset');
 const min = 1;
- const max = 12;
- minCP = 10000 ;
- maxCP = 99999;
- let codeCP ;
+const max = 12;
+minCP = 10000 ;
+maxCP = 99999;
+let codeCP ;
 let nCarr ;
 
 // 2
@@ -41,6 +41,9 @@ sendBtn.addEventListener('click' , function(){
   document.getElementById('output-cp').innerHTML = codeCP;
   let price = km * 0.21 ;
   console.log(price);
+
+
+  
   if (age === 'Minorenne') {
     price = price - (price * sconto20);
     console.log(price);
