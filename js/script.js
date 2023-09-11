@@ -7,7 +7,7 @@
 
 // 1 
 
-const outputTag = document.getElementById('output');
+const biglietto = document.querySelector('biglietto')
 const age = document.getElementById('age');
 const km = document.getElementById('km');
 const sconto20 = 0.2;
@@ -19,8 +19,7 @@ const max = 12;
 minCP = 10000 ;
 maxCP = 99999;
 let codeCP ;
-let nCarr ;
-
+let nCarr ; 
 // 2
 
 // qui gestisco il bottone per generare il biglietto
@@ -41,8 +40,6 @@ sendBtn.addEventListener('click' , function(){
   document.getElementById('output-cp').innerHTML = codeCP;
   let price = km * 0.21 ;
   console.log(price);
-
-
   
   if (age === 'Minorenne') {
     price = price - (price * sconto20);
@@ -65,11 +62,7 @@ resetBtn.addEventListener('click' , function(){
   document.getElementById('name').value = ""  
   document.getElementById('km').value = ""
   document.getElementById('age').value = ""
-  document.getElementById('output-name').value = ""
-  document.getElementById('output-km').value = ""
-  document.getElementById('output-age').value = ""
-  document.getElementById('output-price').value = ""
-  
+ 
 
 })
 
